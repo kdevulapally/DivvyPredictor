@@ -27,6 +27,13 @@
 		5C6368E917FF247400E1EE5E /* Yellow Bike Pin 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6368DE17FF247400E1EE5E /* Yellow Bike Pin 2.png */; };
 		5C6368EA17FF247400E1EE5E /* Yellow Bike Pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6368DF17FF247400E1EE5E /* Yellow Bike Pin.png */; };
 		5C63690317FF2E1800E1EE5E /* libGTLTouchStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15150D3317FF032200AD0B5F /* libGTLTouchStaticLib.a */; };
+		5C63690A17FF395000E1EE5E /* Green Bike Pin 2 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C63690817FF395000E1EE5E /* Green Bike Pin 2 copy.png */; };
+		5C63690B17FF395000E1EE5E /* Red Bike Pin 2 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C63690917FF395000E1EE5E /* Red Bike Pin 2 copy.png */; };
+		5C63690D17FF3A0500E1EE5E /* Yellow Bike Pin 2 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C63690C17FF3A0500E1EE5E /* Yellow Bike Pin 2 copy.png */; };
+		5C63691717FF3F0600E1EE5E /* App Icon v2 - 58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C63691417FF3F0600E1EE5E /* App Icon v2 - 58x58.png */; };
+		5C63691817FF3F0600E1EE5E /* App Icon v2 - 80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C63691517FF3F0600E1EE5E /* App Icon v2 - 80x80.png */; };
+		5C63691917FF3F0600E1EE5E /* App Icon v2 - 120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C63691617FF3F0600E1EE5E /* App Icon v2 - 120x120.png */; };
+		5C63691B17FF3F6D00E1EE5E /* Splash Screen v3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C63691A17FF3F6D00E1EE5E /* Splash Screen v3.png */; };
 		5C79DFBF17FF0BDB00A2339A /* DPBikeStationSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C79DFBE17FF0BDB00A2339A /* DPBikeStationSingleton.m */; };
 		5C79DFCE17FF164600A2339A /* TDArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C79DFCB17FF164600A2339A /* TDArrow.m */; };
 		5C79DFCF17FF164600A2339A /* TDRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C79DFCD17FF164600A2339A /* TDRatingView.m */; };
@@ -179,6 +186,13 @@
 		5C6368DD17FF247400E1EE5E /* Splash Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash Screen.png"; sourceTree = "<group>"; };
 		5C6368DE17FF247400E1EE5E /* Yellow Bike Pin 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow Bike Pin 2.png"; sourceTree = "<group>"; };
 		5C6368DF17FF247400E1EE5E /* Yellow Bike Pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow Bike Pin.png"; sourceTree = "<group>"; };
+		5C63690817FF395000E1EE5E /* Green Bike Pin 2 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Bike Pin 2 copy.png"; sourceTree = "<group>"; };
+		5C63690917FF395000E1EE5E /* Red Bike Pin 2 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red Bike Pin 2 copy.png"; sourceTree = "<group>"; };
+		5C63690C17FF3A0500E1EE5E /* Yellow Bike Pin 2 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yellow Bike Pin 2 copy.png"; sourceTree = "<group>"; };
+		5C63691417FF3F0600E1EE5E /* App Icon v2 - 58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Icon v2 - 58x58.png"; sourceTree = "<group>"; };
+		5C63691517FF3F0600E1EE5E /* App Icon v2 - 80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Icon v2 - 80x80.png"; sourceTree = "<group>"; };
+		5C63691617FF3F0600E1EE5E /* App Icon v2 - 120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Icon v2 - 120x120.png"; sourceTree = "<group>"; };
+		5C63691A17FF3F6D00E1EE5E /* Splash Screen v3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash Screen v3.png"; sourceTree = "<group>"; };
 		5C79DFBD17FF0BDB00A2339A /* DPBikeStationSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPBikeStationSingleton.h; path = Models/DPBikeStationSingleton.h; sourceTree = "<group>"; };
 		5C79DFBE17FF0BDB00A2339A /* DPBikeStationSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPBikeStationSingleton.m; path = Models/DPBikeStationSingleton.m; sourceTree = "<group>"; };
 		5C79DFCA17FF164600A2339A /* TDArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDArrow.h; sourceTree = "<group>"; };
@@ -506,6 +520,13 @@
 		735B148D17FE5FDB00DC611E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5C63691A17FF3F6D00E1EE5E /* Splash Screen v3.png */,
+				5C63691417FF3F0600E1EE5E /* App Icon v2 - 58x58.png */,
+				5C63691517FF3F0600E1EE5E /* App Icon v2 - 80x80.png */,
+				5C63691617FF3F0600E1EE5E /* App Icon v2 - 120x120.png */,
+				5C63690C17FF3A0500E1EE5E /* Yellow Bike Pin 2 copy.png */,
+				5C63690817FF395000E1EE5E /* Green Bike Pin 2 copy.png */,
+				5C63690917FF395000E1EE5E /* Red Bike Pin 2 copy.png */,
 				5C6368D517FF247400E1EE5E /* bike-clipart4.png */,
 				5C6368D617FF247400E1EE5E /* Divvy Header.png */,
 				5C6368D717FF247400E1EE5E /* Divy Up Header.png */,
@@ -783,22 +804,29 @@
 				5C6368E217FF247400E1EE5E /* Divy Up Header.png in Resources */,
 				735B14A917FE8A3D00DC611E /* DPGoogleMapsInfoWindow.xib in Resources */,
 				5C6368E117FF247400E1EE5E /* Divvy Header.png in Resources */,
+				5C63690A17FF395000E1EE5E /* Green Bike Pin 2 copy.png in Resources */,
 				5C6368E517FF247400E1EE5E /* Recent Search Header Bar.png in Resources */,
 				735B149117FE611500DC611E /* ios7_atm_orange_pin@2x.png in Resources */,
 				735B14A717FE8A3D00DC611E /* BaseMapPopoverView.xib in Resources */,
 				735B143817FE2C9B00DC611E /* InfoPlist.strings in Resources */,
 				5C6368E917FF247400E1EE5E /* Yellow Bike Pin 2.png in Resources */,
+				5C63691717FF3F0600E1EE5E /* App Icon v2 - 58x58.png in Resources */,
 				735B144117FE2C9B00DC611E /* Main.storyboard in Resources */,
+				5C63691917FF3F0600E1EE5E /* App Icon v2 - 120x120.png in Resources */,
 				735B146717FE2FB500DC611E /* GoogleMaps.bundle in Resources */,
 				735B14B117FE9AFC00DC611E /* navigationBarBackgroundRetro@2x.png in Resources */,
+				5C63691B17FF3F6D00E1EE5E /* Splash Screen v3.png in Resources */,
 				5C6368E417FF247400E1EE5E /* Orange Divvy Bubble.png in Resources */,
+				5C63691817FF3F0600E1EE5E /* App Icon v2 - 80x80.png in Resources */,
 				5C6368E817FF247400E1EE5E /* Splash Screen.png in Resources */,
+				5C63690D17FF3A0500E1EE5E /* Yellow Bike Pin 2 copy.png in Resources */,
 				5C6368E717FF247400E1EE5E /* Search Bar.png in Resources */,
 				5C6368E317FF247400E1EE5E /* Green Bike Pin.png in Resources */,
 				5C6368E617FF247400E1EE5E /* Red Bike Pin.png in Resources */,
 				15150D4317FF285C00AD0B5F /* GTMOAuth2ViewTouch.xib in Resources */,
 				735B14B017FE9AFC00DC611E /* navigationBarBackgroundRetro.png in Resources */,
 				5C6368E017FF247400E1EE5E /* bike-clipart4.png in Resources */,
+				5C63690B17FF395000E1EE5E /* Red Bike Pin 2 copy.png in Resources */,
 				735B149017FE611500DC611E /* ios7_atm_orange_pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

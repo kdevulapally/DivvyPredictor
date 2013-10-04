@@ -25,13 +25,13 @@
             imageName = @"mapview_green_b_pin";
             break;
         case GreenBike:
-            imageName = @"Green Bike Pin";
+            imageName = @"Green Bike Pin 2 copy";
             break;
         case YellowBike:
-            imageName = @"Yellow Bike Pin";
+            imageName = @"Yellow Bike Pin 2 copy";
             break;
         case RedBike:
-            imageName = @"Red Bike Pin";
+            imageName = @"Red Bike Pin 2 copy";
             break;
     }
     return [UIImage imageNamed:imageName];

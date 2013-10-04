@@ -18,7 +18,7 @@
 
 
 @interface DPMapViewController () {
-}
+    GTMOAuth2Authentication *divvyauth;}
 
 @property (weak, nonatomic) IBOutlet GMSMapView *googleMapView;
 @property (weak, nonatomic) IBOutlet UIButton *selectDestinationButton;
@@ -50,6 +50,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    NSMutableArray * nearestBikeStations = [[NSMutableArray alloc] init];
     [self loadStationsWithCompletionHandler:^{
         DPBikeStationSingleton *singleton = [DPBikeStationSingleton sharedManager];
         self.bikeStations = [singleton.divvyDataSource objectForKey:kBikeStations];
@@ -57,8 +58,11 @@
         if([self.bikeStations count] > 0) {
             int count = 1;
             for (DPBikeStation *bikeStation in self.bikeStations) {
-                if (bikeStation.distanceToBikeStationFromCurrentLocation < 1.0 && bikeStation.distanceToBikeStationFromCurrentLocation != 0.00 && count < 5) {
+                if (bikeStation.distanceToBikeStationFromCurrentLocation < 0.5 && bikeStation.distanceToBikeStationFromCurrentLocation != 0.00 && count < 5) {
+                    
                     CLLocationCoordinate2D location =  CLLocationCoordinate2DMake(bikeStation.latitude, bikeStation.longitude);
+                    bikeStation.mapLocation = location;
+                    [nearestBikeStations addObject:bikeStation];
                     PinType type;
                 
                 float probability = [bikeStation.availableBikes floatValue] / ([bikeStation.availableBikes floatValue] + [bikeStation.availableDocks floatValue]);
@@ -75,6 +79,7 @@
                 }
             }
         }
+        [self updatePredictedDockAvailabilityforStation:nearestBikeStations forPredictorTime:@"15.40"];
     }];
 }
 
@@ -278,13 +283,44 @@
                                                otherButtonTitles:nil];
         [alert show];
     } else {
-        DivvyPrediction *prediction = [[DivvyPrediction alloc]init];
-        [prediction divvyPrediction:@"19" availableDocks:@"14" atTime:@"14.01" withAuthentication:auth andStationIdentifier:@"66" successBlock:^(int availableBikes) {
-            NSLog(@"%d", availableBikes);
-        } failureBlock:^(NSError *error) {
-            NSLog(@"%@", [error localizedDescription]);
-        }];
+//        DivvyPrediction *prediction = [[DivvyPrediction alloc]init];
+        divvyauth=auth;
+//        [prediction divvyPrediction:@"19" availableDocks:@"14" atTime:@"14.01" withAuthentication:auth andStationIdentifier:@"66" successBlock:^(int availableBikes) {
+//            NSLog(@"%d", availableBikes);
+//        } failureBlock:^(NSError *error) {
+//            NSLog(@"%@", [error localizedDescription]);
+//        }];
     }
+}
+
+- (void)updatePredictedDockAvailabilityforStation:(NSMutableArray *)bikeStations forPredictorTime:(NSString *)time
+{
+    DivvyPrediction * predictor = [[DivvyPrediction alloc] init];
+    [self.googleMapView clear];
+    __block int i =0;
+    NSArray * stationId = @[@"66",@"77",@"112",@"91",@"174"];
+   for(DPBikeStation * stations in bikeStations)
+   {
+       NSLog(@"%@--%@",stations.availableDocks,bikeStations);
+       [predictor divvyPrediction:stations.availableDocks availableDocks:stations.totalDocks atTime:time withAuthentication:divvyauth andStationIdentifier:[stationId objectAtIndex:i] successBlock:^(int availableBikes) {
+           stations.availableBikes = [NSString stringWithFormat:@"%d",availableBikes];
+           PinType type;
+           
+           float probability = [stations.availableBikes floatValue] / ([stations.availableBikes floatValue] + [stations.availableDocks floatValue]);
+           
+           if (probability >= .5)
+               type = GreenBike;
+           else if ([stations.availableBikes intValue] <= .1)
+               type = RedBike;
+           else
+               type = YellowBike;
+           i=i+1;
+           [self addPinToMap:self.googleMapView ofType:type atLocation:stations.mapLocation withUserData:stations];
+       } failureBlock:^(NSError *eror) {
+           NSLog(@"error in predicting bike availability %@",eror);
+       }
+   ];
+   }
 }
 
 @end

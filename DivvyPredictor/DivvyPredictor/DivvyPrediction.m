@@ -21,7 +21,7 @@
     GTLPredictionTrainedmodelsPredictInput *input = [[GTLPredictionTrainedmodelsPredictInput alloc]init];
     input.csvInstance = @[totalNumberOfDocks,availableDocks,time];
     
-    GTLQueryPrediction *query = [GTLQueryPrediction queryForTrainedmodelsPredictWithProject:@"221220586705" identifier:[NSString stringWithFormat:@"divvystation%@",stationID]];
+    GTLQueryPrediction *query = [GTLQueryPrediction queryForTrainedmodelsPredictWithProject:@"221220586705" identifier:[NSString stringWithFormat:@"ds%@",stationID]];
     query.input = input;
     query.fields = @"outputValue";
     
